@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyledWrapper } from './styles';
 
-function Wrapper(props) {
+function Wrapper({children}) {
   return ( 
-    <StyledWrapper/>
+    <StyledWrapper>{children}</StyledWrapper>
    );
 }
 

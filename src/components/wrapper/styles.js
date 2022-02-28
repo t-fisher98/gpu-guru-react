@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
-  background-color: blue;
-  height: 75vh;
+  background-color: ${props => props.bgcolor || "white"};
+  height: 60vh;
   width: 75vw;
   max-height: 50rem;
   max-width: 70rem;

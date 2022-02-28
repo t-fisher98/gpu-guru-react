@@ -1,38 +1,53 @@
-import styled from 'styled-components'; 
-
-const StyledFormWrapper = styled.div`
-  background-color: blue;
-  height: 75vh;
-  width: 75vw;
-  max-height: 50rem;
-  max-width: 70rem;
-  border-radius: 15px;
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
+import styled from 'styled-components';
 
 const StyledForm = styled.form`
-  width: 60%;
-  height: 100%;
-  padding: 1.5rem;
-  background-color: pink;
+  background-color: ${(props) => props.bgcolor || "white"};
+  width: ${(props) => props.width || "100%"};
+  height: ${(props) => props.height || "100%"};
+  padding: ${(props) => props.padding || "0"};
 `;
 
-const StyledFormInputGroup = styled.div`
-  background-color: green;
+const StyledDiv = styled.div`
+  background-color: ${props => props.bgcolor || "white"};
+  width: ${props => props.width || "100%"};
+  height: ${props => props.height || "100%"};
+  margin: ${props => props.margin || "0"};
+  padding: ${props => props.padding || "0"};
+  position: relative;
+`;
+
+const StyledInput = styled.input`
+  border: none;
+  border-radius: 3px;
+  display: block;
   width: 100%;
-  height: 50%;
-  margin: auto;
+  margin: 0 auto;
 `;
 
-const StyledBranding = styled.div`
-  width: 40%;
-  height: 100%;
-  padding: 1.5rem;
-  border-left: 1px solid yellow;
+const StyledEmailInput = styled(StyledInput).attrs({
+  type: "email",
+  placeholder: "Email"
+})`
+  position: absolute;
+  background-color: crimson;
+  color: white;
+  top: 45%
 `;
 
-export { StyledFormWrapper, StyledForm, StyledFormInputGroup, StyledBranding };
+const StyledPasswordInput = styled(StyledInput).attrs({
+  type: "password",
+  placeholder: "Password",
+})`
+  position: absolute;
+  background-color: blueviolet;
+  color: white;
+  top: 55%;
+`;
+
+export {
+  StyledForm,
+  StyledDiv,
+  StyledInput,
+  StyledEmailInput,
+  StyledPasswordInput,
+};
