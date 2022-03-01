@@ -7,8 +7,8 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyles />
     <BrowserRouter>
-      <GlobalStyles />
       <App />
     </BrowserRouter>
   </React.StrictMode>,
