@@ -14,7 +14,7 @@ import {
 function LoginPage() {
   return (
     <Center h="100vh" bgColor="white">
-      <Flex width="70vw" maxW="60rem" minW="45rem" height="60vh">
+      <Flex width="70vw" maxW="80rem" minW="40rem" height="60vh">
         <Center width="60%" height="100%" bgColor="lightgrey" borderRadius="1rem 0 0 1rem" flexDirection="column" gap="2rem">
           <FormControl maxW="80%" isRequired>
             <FormLabel>Email</FormLabel>
