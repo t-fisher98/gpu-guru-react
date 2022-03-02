@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
+import { MdFacebook } from "react-icons/md";
 import {
   Center,
   Flex,
@@ -8,9 +10,11 @@ import {
   FormHelperText,
   Button,
   Heading,
-  Text
+  Text,
+  Icon,
+  HStack
 } from "@chakra-ui/react";
-import { Link } from 'react-router-dom'
+
 
 function LoginPage() {
   return (
@@ -26,7 +30,7 @@ function LoginPage() {
         >
           <FormControl maxW="80%" isRequired>
             <FormLabel>Email</FormLabel>
-            <Input type="email" placeholder="janedoe@gmail.com"></Input>
+            <Input type="email"></Input>
             <FormHelperText>Please enter your email</FormHelperText>
           </FormControl>
           <FormControl maxW="80%" isRequired>
@@ -42,6 +46,16 @@ function LoginPage() {
                 </Button>
               </Link>
             </FormControl>
+          </Center>
+          <Center>
+            <Text>Or</Text>
+          </Center>
+          <Center>
+            <HStack>
+              <Icon as={MdFacebook}/>
+              <Icon as={}/>
+              <Icon as={}/>
+            </HStack>
           </Center>
         </Center>
         <Center
@@ -63,5 +77,7 @@ function LoginPage() {
     </Center>
   );
 }
+
+
 
 export default LoginPage
