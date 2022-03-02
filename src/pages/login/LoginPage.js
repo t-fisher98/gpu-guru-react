@@ -8,14 +8,15 @@ import {
   FormHelperText,
   Button,
   Heading,
-  Text
+  Text,
+  Link
 } from "@chakra-ui/react";
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
 
 function LoginPage() {
   return (
     <Center h="100vh" bgColor="#f5f5f5">
-      <Flex width="70vw" maxW="80rem" minW="40rem" height="60vh">
+      <Flex width="70vw" maxW="80rem" minW="40rem" height="60vh" boxShadow="0 0 10px 5px lightgrey" borderRadius="1rem">
         <Center
           width="60%"
           height="100%"
@@ -36,11 +37,12 @@ function LoginPage() {
           </FormControl>
           <Center width="80%">
             <FormControl width="100%">
-              <Link to="/dashboard">
-                <Button type="submit" variant="outline" width="100%">
+              <Button variant="outline">
+                <Link as={RouterLink} to="/dashboard" type="submit" variant="outline" display="block" width="100%">
                   Sign In
-                </Button>
-              </Link>
+                </Link>
+              </Button>
+
             </FormControl>
           </Center>
         </Center>
@@ -52,7 +54,7 @@ function LoginPage() {
           borderRadius="0 1rem 1rem 0"
           flexDirection="column"
         >
-          <Heading color="lightgrey" fontSize="2.5rem">
+          <Heading color="lightgrey" fontSize="3vw">
             Welcome Back!
           </Heading>
           <Text color="lightgrey" fontSize="1.25rem">
