@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from "react-router-dom";
 import { MdFacebook } from "react-icons/md";
 import {
   Center,
@@ -46,7 +45,6 @@ function LoginPage() {
                   Sign In
                 </Link>
               </Button>
-
             </FormControl>
           </Center>
           <Center>
@@ -55,8 +53,6 @@ function LoginPage() {
           <Center>
             <HStack>
               <Icon as={MdFacebook}/>
-              <Icon as={}/>
-              <Icon as={}/>
             </HStack>
           </Center>
         </Center>
