@@ -1,15 +1,15 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import {Routes, Route} from 'react-router-dom'
-import LoginPage from './pages/LoginPage'
-import DashBoardPage from "./pages/DashboardPage"
+import { LoginPage, DashboardPage, PageNotFound } from './pages'
 
 function App() {
   return (
     <ChakraProvider>
       <Routes>
-        <Route path="/" element={<LoginPage/>}/>
-        <Route path="/dashboard" element={<DashBoardPage/>}/>
+        <Route index element={<LoginPage/>}/>
+        <Route path="/dashboard" element={<DashboardPage/>}/>
+        <Route path="/*" element={<PageNotFound/>}/>
       </Routes>
     </ChakraProvider>
   );
