@@ -17,10 +17,12 @@ import {
   Input,
   InputRightElement,
   FormHelperText,
+  Checkbox,
   Button,
   Heading,
   Text,
   HStack,
+  VStack,
   Link,
   IconButton,
   Box,
@@ -102,32 +104,35 @@ function LoginPage() {
             Sign in to your Dashboard
           </Text>
           <FormStyles method="POST" onSubmit={onSignInRequest}>
-            <FormControl isRequired={emailHasValue} mb="1rem">
-              <FormLabel>Email</FormLabel>
-              <Input onChange={onInputChange} type="email" required></Input>
-            </FormControl>
-            <FormControl isRequired={passwordHasValue} mb="1rem">
-              <FormLabel>Password</FormLabel>
-              <InputGroup>
-                <Input
-                  type={showPassword ? "password" : "text"}
-                  onChange={onInputChange}
-                  required
-                ></Input>
-                <InputRightElement
-                  children={
-                    showPassword ? <AiFillEye /> : <AiFillEyeInvisible />
-                  }
-                  fontSize="1.5rem"
-                  _hover={{ cursor: "pointer" }}
-                  onClick={togglePassword}
-                />
-              </InputGroup>
-              <FormHelperText>
-                <Link>Forgot Password?</Link>
-              </FormHelperText>
-            </FormControl>
-            <Center>
+            <VStack spacing={4}>
+              <FormControl isRequired={emailHasValue}>
+                <FormLabel>Email</FormLabel>
+                <Input onChange={onInputChange} type="email" required></Input>
+              </FormControl>
+              <FormControl isRequired={passwordHasValue}>
+                <FormLabel>Password</FormLabel>
+                <InputGroup>
+                  <Input
+                    type={showPassword ? "password" : "text"}
+                    onChange={onInputChange}
+                    required
+                  ></Input>
+                  <InputRightElement
+                    children={
+                      showPassword ? <AiFillEye /> : <AiFillEyeInvisible />
+                    }
+                    fontSize="1.5rem"
+                    _hover={{ cursor: "pointer" }}
+                    onClick={togglePassword}
+                  />
+                </InputGroup>
+                <FormHelperText>
+                  <Flex justifyContent="space-between">
+                    <Checkbox>Remember Me</Checkbox>
+                    <Link>Forgot Password?</Link>
+                  </Flex>
+                </FormHelperText>
+              </FormControl>
               <FormControl>
                 <Button
                   type="submit"
@@ -139,7 +144,7 @@ function LoginPage() {
                   Sign In
                 </Button>
               </FormControl>
-            </Center>
+            </VStack>
           </FormStyles>
           <Center
             width="50%"
