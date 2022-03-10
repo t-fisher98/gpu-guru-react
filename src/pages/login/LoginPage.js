@@ -35,8 +35,9 @@ function LoginPage() {
   const [emailHasValue, setEmailHasValue] = useState(true);
   const [passwordHasValue, setPasswordHasValue] = useState(true);
 
-  function onSignInRequest() {
-    navigate("/dashboard");
+  function onSignInRequest(e) {
+    e.preventDefault();
+    navigate('/dashboard')
   }
 
   function togglePassword() {
@@ -100,7 +101,7 @@ function LoginPage() {
           <Text color="gray.800" fontSize="1.25rem">
             Sign in to your Dashboard
           </Text>
-          <FormStyles>
+          <FormStyles method="POST" onSubmit={onSignInRequest}>
             <FormControl isRequired={emailHasValue} mb="1rem">
               <FormLabel>Email</FormLabel>
               <Input onChange={onInputChange} type="email" required></Input>
@@ -129,7 +130,7 @@ function LoginPage() {
             <Center>
               <FormControl>
                 <Button
-                  onClick={onSignInRequest}
+                  type="submit"
                   width="100%"
                   bgColor="gray.800"
                   color="white"
