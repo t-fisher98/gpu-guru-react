@@ -107,7 +107,7 @@ function LoginPage() {
             <VStack spacing={4}>
               <FormControl isRequired={emailHasValue}>
                 <FormLabel>Email</FormLabel>
-                <Input onChange={onInputChange} type="email" required></Input>
+                <Input onChange={onInputChange} type="email" required />
               </FormControl>
               <FormControl isRequired={passwordHasValue}>
                 <FormLabel>Password</FormLabel>
@@ -116,7 +116,7 @@ function LoginPage() {
                     type={showPassword ? "password" : "text"}
                     onChange={onInputChange}
                     required
-                  ></Input>
+                  />
                   <InputRightElement
                     children={
                       showPassword ? <AiFillEye /> : <AiFillEyeInvisible />
