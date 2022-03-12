@@ -11,15 +11,16 @@ import { BiChevronRight } from "react-icons/bi";
 function SideBarLink({children, ...props}) {
   return (
     <Link
-      fontSize={props.fontSize || "xl"}
+      fontSize={props.fontSize || "md"}
       color={props.color || "gray.100"}
+      border={props.border || "none"}
       _hover={{ textDecoration: "none" }}
     >
-      <Flex alignItems={"center"} justifyContent={"space-between"} px={"3"}>
-        <Box>
-          <ListIcon as={props.icon} />
+      <Flex alignItems={"center"} justifyContent={"space-between"} p="3">
+        <Flex alignItems="center">
+          <ListIcon as={props.icon} fontSize="1.5rem"/>
           {children}
-        </Box>
+        </Flex>
         <ListIcon as={BiChevronRight} mx="none" />
       </Flex>
     </Link>

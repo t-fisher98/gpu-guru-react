@@ -7,7 +7,7 @@ import {
   InputLeftElement,
   HStack,
   IconButton,
-  Img
+  Image
 } from '@chakra-ui/react'
 import {
   BsSearch,
@@ -27,13 +27,14 @@ function AppBar(props) {
   return (
     <Flex
       position="fixed"
-      px="1rem"
+      px="2rem"
       width="calc(100% - 15.5rem)"
       height="4rem"
       bg="white"
       right="0"
       alignItems="center"
       justifyContent="space-between"
+      boxShadow=" 0 5px 5px lightgray"
     >
       <InputGroup>
         <Input
@@ -72,14 +73,10 @@ function AppBar(props) {
           _hover={{ cursor: "pointer", bgColor: "gray.100" }}
           _focus={{ outline: "none" }}
         />
-        <IconButton
-          icon={<BsBell />}
-          variant="ghost"
-          isRound
-          size="md"
-          fontSize="1.5rem"
-          _hover={{ cursor: "pointer", bgColor: "gray.100" }}
-          _focus={{ outline: "none" }}
+        <Image 
+          src="https://avatars.dicebear.com/api/initials/TF.svg?b=%232d3250&r=50&backgroundColorLevel=900"
+          boxSize="1.75rem"
+          _hover={{cursor: "pointer"}}
         />
         <IconButton
           icon={<IoEllipsisVertical />}

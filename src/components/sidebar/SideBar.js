@@ -14,8 +14,20 @@ import {
   ListIcon,
   Icon,
 } from "@chakra-ui/react";
-import { BsFillCpuFill, BsFillGrid3X3GapFill } from "react-icons/bs";
+import {
+  BsFillCpuFill,
+  BsFillGrid3X3GapFill,
+  BsFillPeopleFill,
+  BsPeople,
+  BsCardList,
+  BsCartFill,
+  BsStarHalf,
+  BsFillTagsFill,
+  BsBoxArrowInRight,
+} from "react-icons/bs";
 import { MdDashboard } from 'react-icons/md'
+import { IoDiamondOutline } from 'react-icons/io5'
+import { CgStack } from 'react-icons/cg'
 
 export default function SideBar({children, ...props}) {
   return (
@@ -25,12 +37,39 @@ export default function SideBar({children, ...props}) {
           GPU Guru
         </Branding>
       </Center>
-      <List mt="3">
+      <List>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={BsFillGrid3X3GapFill}>Products</SideBarLink>
+          <SideBarLink icon={MdDashboard}>DASHBOARD</SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={MdDashboard}>Dashboard</SideBarLink>
+          <SideBarLink icon={BsPeople}>VENDORS</SideBarLink>
+        </ListItem>
+        <ListItem _hover={{ bgColor: "blue.600" }}>
+          <SideBarLink icon={BsFillPeopleFill}>USERS</SideBarLink>
+        </ListItem>
+        <ListItem _hover={{ bgColor: "blue.600" }}>
+          <SideBarLink icon={BsCardList}>CATEGORIES</SideBarLink>
+        </ListItem>
+        <ListItem _hover={{ bgColor: "blue.600" }}>
+          <SideBarLink icon={BsFillGrid3X3GapFill}>PRODUCTS</SideBarLink>
+        </ListItem>
+        <ListItem _hover={{ bgColor: "blue.600" }}>
+          <SideBarLink icon={BsCartFill}>ORDERS</SideBarLink>
+        </ListItem>
+        <ListItem _hover={{ bgColor: "blue.600" }}>
+          <SideBarLink icon={BsStarHalf}>REVIEWS</SideBarLink>
+        </ListItem>
+        <ListItem _hover={{ bgColor: "blue.600" }}>
+          <SideBarLink icon={BsFillTagsFill}>BRANDS</SideBarLink>
+        </ListItem>
+        <ListItem _hover={{ bgColor: "blue.600" }}>
+          <SideBarLink icon={BsBoxArrowInRight}>AUTHENTICATION</SideBarLink>
+        </ListItem>
+        <ListItem _hover={{ bgColor: "blue.600" }}>
+          <SideBarLink icon={IoDiamondOutline}>ICONS</SideBarLink>
+        </ListItem>
+        <ListItem _hover={{ bgColor: "blue.600" }}>
+          <SideBarLink icon={CgStack}>OTHER PAGES</SideBarLink>
         </ListItem>
       </List>
     </Box>
