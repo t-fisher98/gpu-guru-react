@@ -58,7 +58,7 @@ function LoginPage() {
         setPasswordHasValue(true);
       }
     } else {
-      if (e.currentTarget.type === "email") {
+      if (e.currentTarget.type == "email") {
         setEmailHasValue(false);
       } else {
         setPasswordHasValue(false);
