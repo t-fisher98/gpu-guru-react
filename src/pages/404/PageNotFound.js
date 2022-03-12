@@ -7,7 +7,7 @@ import { Branding } from 'ui/branding'
 
 function PageNotFound() {
   return (
-    <Center p="1rem" flexDirection="column" gap="3">
+    <Center height="100vh" p="1rem" bg="gray.50" flexDirection="column" gap="3">
       <Branding icon={BsFillCpuFill} iFs="3rem" />
       <Heading fontSize="8xl" color="gray.800">
         OOPS!
@@ -20,12 +20,10 @@ function PageNotFound() {
       >
         We can't seem to find what you are looking for!
       </Text>
-      <Text color="gray.800">Error Code: 404</Text>
-     <Link to="/">
-        <Button colorScheme="blue">
-          Back to Safety
-        </Button>
-     </Link>
+      <Text color="red.600" fontWeight="bold">Error Code: 404</Text>
+      <Link to="/">
+        <Button colorScheme="blue">Back to Safety</Button>
+      </Link>
     </Center>
   );
 }
