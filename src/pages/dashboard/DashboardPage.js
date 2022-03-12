@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Flex, Center, Box, Heading } from '@chakra-ui/react'
 import { SideBar } from 'components/sidebar'
 import { AppBar } from 'components/appbar'

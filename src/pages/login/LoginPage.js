@@ -51,8 +51,8 @@ function LoginPage() {
   }
 
   function onInputChange(e) {
-    if (e.currentTarget.value.length == 0) {
-      if (e.currentTarget.type == "email") {
+    if (e.currentTarget.value.length === 0) {
+      if (e.currentTarget.type === "email") {
         setEmailHasValue(true);
       } else {
         setPasswordHasValue(true);
