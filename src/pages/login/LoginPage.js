@@ -17,10 +17,12 @@ import {
   Input,
   InputRightElement,
   FormHelperText,
+  Checkbox,
   Button,
   Heading,
   Text,
   HStack,
+  VStack,
   Link,
   IconButton,
   Box,
@@ -35,8 +37,9 @@ function LoginPage() {
   const [emailHasValue, setEmailHasValue] = useState(true);
   const [passwordHasValue, setPasswordHasValue] = useState(true);
 
-  function onSignInRequest() {
-    navigate("/dashboard");
+  function onSignInRequest(e) {
+    e.preventDefault();
+    navigate('/dashboard')
   }
 
   function togglePassword() {
@@ -100,36 +103,39 @@ function LoginPage() {
           <Text color="gray.800" fontSize="1.25rem">
             Sign in to your Dashboard
           </Text>
-          <FormStyles>
-            <FormControl isRequired={emailHasValue} mb="1rem">
-              <FormLabel>Email</FormLabel>
-              <Input onChange={onInputChange} type="email" required></Input>
-            </FormControl>
-            <FormControl isRequired={passwordHasValue} mb="1rem">
-              <FormLabel>Password</FormLabel>
-              <InputGroup>
-                <Input
-                  type={showPassword ? "password" : "text"}
-                  onChange={onInputChange}
-                  required
-                ></Input>
-                <InputRightElement
-                  children={
-                    showPassword ? <AiFillEye /> : <AiFillEyeInvisible />
-                  }
-                  fontSize="1.5rem"
-                  _hover={{ cursor: "pointer" }}
-                  onClick={togglePassword}
-                />
-              </InputGroup>
-              <FormHelperText>
-                <Link>Forgot Password?</Link>
-              </FormHelperText>
-            </FormControl>
-            <Center>
+          <FormStyles method="POST" onSubmit={onSignInRequest}>
+            <VStack spacing={4}>
+              <FormControl isRequired={emailHasValue}>
+                <FormLabel>Email</FormLabel>
+                <Input onChange={onInputChange} type="email" required />
+              </FormControl>
+              <FormControl isRequired={passwordHasValue}>
+                <FormLabel>Password</FormLabel>
+                <InputGroup>
+                  <Input
+                    type={showPassword ? "password" : "text"}
+                    onChange={onInputChange}
+                    required
+                  />
+                  <InputRightElement
+                    children={
+                      showPassword ? <AiFillEye /> : <AiFillEyeInvisible />
+                    }
+                    fontSize="1.5rem"
+                    _hover={{ cursor: "pointer" }}
+                    onClick={togglePassword}
+                  />
+                </InputGroup>
+                <FormHelperText>
+                  <Flex justifyContent="space-between">
+                    <Checkbox>Remember Me</Checkbox>
+                    <Link>Forgot Password?</Link>
+                  </Flex>
+                </FormHelperText>
+              </FormControl>
               <FormControl>
                 <Button
-                  onClick={onSignInRequest}
+                  type="submit"
                   width="100%"
                   bgColor="gray.800"
                   color="white"
@@ -138,7 +144,7 @@ function LoginPage() {
                   Sign In
                 </Button>
               </FormControl>
-            </Center>
+            </VStack>
           </FormStyles>
           <Center
             width="50%"
