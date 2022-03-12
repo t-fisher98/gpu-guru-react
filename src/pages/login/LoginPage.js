@@ -51,14 +51,14 @@ function LoginPage() {
   }
 
   function onInputChange(e) {
-    if (e.currentTarget.value.length == 0) {
-      if (e.currentTarget.type == "email") {
+    if (e.currentTarget.value.length === 0) {
+      if (e.currentTarget.type === "email") {
         setEmailHasValue(true);
       } else {
         setPasswordHasValue(true);
       }
     } else {
-      if (e.currentTarget.type == "email") {
+      if (e.currentTarget.type === "email") {
         setEmailHasValue(false);
       } else {
         setPasswordHasValue(false);

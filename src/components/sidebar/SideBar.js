@@ -4,15 +4,9 @@ import { Branding } from 'ui/branding';
 import { SideBarLink } from 'ui/links';
 import {
   Box,
-  Flex,
   Center,
-  Heading,
-  Button,
-  Link,
   List,
   ListItem,
-  ListIcon,
-  Icon,
 } from "@chakra-ui/react";
 import {
   BsFillCpuFill,
