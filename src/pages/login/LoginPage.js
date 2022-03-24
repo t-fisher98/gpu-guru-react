@@ -4,6 +4,8 @@ import { BsFacebook, BsFillCpuFill } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillTwitterCircle, AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
+import { auth } from 'libs/firebase'
+import {signInWithEmailAndPassword} from 'firebase/auth'
 import {
 	Center,
 	Flex,
@@ -39,22 +41,22 @@ function LoginPage() {
 
 
 	function onSignInRequest(e) {
-	e.preventDefault();
-	// signInWithEmailAndPassword(auth, email, password)
-	// .then(userCredential => {
-	// 	navigate("/dashboard");
-	// })
-	// .catch(error => {
-		
-	// })
+		e.preventDefault();
+		signInWithEmailAndPassword(auth, email, password)
+		.then(userCredential => {
+			navigate("/dashboard");
+		})
+		.catch(error => {
+			
+		})
 	}
 
 	function togglePassword() {
-	if (showPassword) {
-		setShowPassword(false);
-	} else {
-		setShowPassword(true);
-	}
+		if (showPassword) {
+			setShowPassword(false);
+		} else {
+			setShowPassword(true);
+		}
 	}
 
 	function onInputChange(e) {
