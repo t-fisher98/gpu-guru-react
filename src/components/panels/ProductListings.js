@@ -1,8 +1,7 @@
 import React from 'react'
 
 import {
-  Box,
-
+  Box
 } from '@chakra-ui/react'
 
 function ProductListings({children, ...props}) {
