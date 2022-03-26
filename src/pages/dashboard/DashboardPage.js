@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Outlet } from 'react-router-dom'
 
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from 'libs/firebase'
@@ -7,7 +7,7 @@ import { auth } from 'libs/firebase'
 import { Flex, Center, Box, Heading } from '@chakra-ui/react'
 import { SideBar } from 'components/sidebar'
 import { AppBar } from 'components/appbar'
-import { ProductListings } from 'components/panels'
+import { BasePanel } from 'components/panels'
 
 function DashboardPage() {
     // Set up a state variable for conditional rendering based on user authentication
@@ -27,23 +27,19 @@ function DashboardPage() {
         setIsUser(true);
     });
 
+	// If there is no user signed in, do not render any content
 	if (!isUser) {
         return null;
     }
 
+	// If a user is signed in, render the following content
     return (
         <>
             <Flex width="100vw" height="100vh" bg="gray.200">
                 <SideBar />
                 <AppBar />
                 <Center width="calc(100% - 15.5rem)" flexDirection={"column"}>
-                    <ProductListings width="90%" height="75%">
-                        <Box p="1rem" borderBottom="1px solid lightgray">
-                            <Heading color="gray.600" fontSize="3xl">
-                                Product Listings
-                            </Heading>
-                        </Box>
-                    </ProductListings>
+					<Outlet/>
                 </Center>
             </Flex>
         </>

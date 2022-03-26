@@ -33,7 +33,7 @@ import {
     toast,
 } from "@chakra-ui/react";
 import { FormStyles } from "ui/forms";
-import SemiConductor from "assets/images/semiconductor.jpg";
+// import SemiConductor from "assets/images/semiconductor.jpg";
 
 function LoginPage() {
     const navigate = useNavigate();
@@ -236,7 +236,7 @@ function LoginPage() {
                 <Center
                     w="40%"
                     borderRadius="0 1rem 1rem 0"
-                    bgImage={SemiConductor}
+                    bgImage="./images/semiconductor.jpg"
                     bgPosition="center"
                     bgSize="cover"
                     bgRepeat="no-repeat"

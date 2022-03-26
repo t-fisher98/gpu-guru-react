@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link as RouterLink } from 'react-router-dom'
 
 import {
   Flex,
@@ -7,9 +8,11 @@ import {
 } from "@chakra-ui/react";
 import { BiChevronRight } from "react-icons/bi";
 
-function SideBarLink({children, ...props}) {
+function SideBarLink({children, to, ...props}) {
   return (
     <Link
+			as={RouterLink}
+			to={to}
       fontSize={props.fontSize || "md"}
       color={props.color || "gray.100"}
       border={props.border || "none"}
