@@ -29,8 +29,7 @@ import {
     IconButton,
     Box,
     Icon,
-    useToast,
-    toast,
+    useToast
 } from "@chakra-ui/react";
 import { FormStyles } from "ui/forms";
 // import SemiConductor from "assets/images/semiconductor.jpg";

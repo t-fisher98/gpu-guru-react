@@ -1,9 +1,8 @@
-import React, { Children } from 'react'
+import React from 'react'
 
 import {
   Box,
-  Heading,
-	Flex
+  Heading
 } from '@chakra-ui/react'
 
 function BasePanel({children, title, ...props}) {

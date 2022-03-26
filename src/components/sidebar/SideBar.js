@@ -13,7 +13,6 @@ import {
 	BsPlusCircleFill,
 	BsFillPencilFill,
   BsFillGrid3X3GapFill,
-  BsFillPeopleFill,
   BsCardList,
   BsCartFill,
   BsStarHalf,

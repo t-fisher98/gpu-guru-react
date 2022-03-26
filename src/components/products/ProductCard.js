@@ -5,8 +5,7 @@ import {
 	Box,
 	Text,
 	Image,
-	Flex,
-	Center
+	Flex
 } from '@chakra-ui/react'
 
 function ProductCard(props) {

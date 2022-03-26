@@ -4,10 +4,9 @@ import { useNavigate, Outlet } from 'react-router-dom'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from 'libs/firebase'
 
-import { Flex, Center, Box, Heading } from '@chakra-ui/react'
+import { Flex, Center } from '@chakra-ui/react'
 import { SideBar } from 'components/sidebar'
 import { AppBar } from 'components/appbar'
-import { BasePanel } from 'components/panels'
 
 function DashboardPage() {
     // Set up a state variable for conditional rendering based on user authentication
