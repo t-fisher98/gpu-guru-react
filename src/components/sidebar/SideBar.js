@@ -10,9 +10,10 @@ import {
 } from "@chakra-ui/react";
 import {
   BsFillCpuFill,
+	BsPlusCircleFill,
+	BsFillPencilFill,
   BsFillGrid3X3GapFill,
   BsFillPeopleFill,
-  BsPeople,
   BsCardList,
   BsCartFill,
   BsStarHalf,
@@ -33,37 +34,59 @@ export default function SideBar({children, ...props}) {
       </Center>
       <List>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={MdDashboard}>DASHBOARD</SideBarLink>
+          <SideBarLink icon={MdDashboard} to="">
+            DASHBOARD
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={BsPeople}>VENDORS</SideBarLink>
+          <SideBarLink icon={BsPlusCircleFill} to="/dashboard/add">
+            ADD PRODUCT
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={BsFillPeopleFill}>USERS</SideBarLink>
+          <SideBarLink icon={BsFillPencilFill} to="/dashboard/edit">
+            EDIT PRODUCT
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={BsCardList}>CATEGORIES</SideBarLink>
+          <SideBarLink icon={BsCardList} to="">
+            CATEGORIES
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={BsFillGrid3X3GapFill}>PRODUCTS</SideBarLink>
+          <SideBarLink icon={BsFillGrid3X3GapFill} to="">
+            PRODUCTS
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={BsCartFill}>ORDERS</SideBarLink>
+          <SideBarLink icon={BsCartFill} to="">
+            ORDERS
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={BsStarHalf}>REVIEWS</SideBarLink>
+          <SideBarLink icon={BsStarHalf} to="">
+            REVIEWS
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={BsFillTagsFill}>BRANDS</SideBarLink>
+          <SideBarLink icon={BsFillTagsFill} to="">
+            BRANDS
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={BsBoxArrowInRight}>AUTHENTICATION</SideBarLink>
+          <SideBarLink icon={BsBoxArrowInRight} to="">
+            AUTHENTICATION
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={IoDiamondOutline}>ICONS</SideBarLink>
+          <SideBarLink icon={IoDiamondOutline} to="">
+            ICONS
+          </SideBarLink>
         </ListItem>
         <ListItem _hover={{ bgColor: "blue.600" }}>
-          <SideBarLink icon={CgStack}>OTHER PAGES</SideBarLink>
+          <SideBarLink icon={CgStack} to="">
+            OTHER PAGES
+          </SideBarLink>
         </ListItem>
       </List>
     </Box>
