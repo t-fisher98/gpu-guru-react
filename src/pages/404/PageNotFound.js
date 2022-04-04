@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { auth } from "libs/firebase";
 import { BsFillCpuFill } from "react-icons/bs";
 import { Center, Heading, Button, Text } from "@chakra-ui/react";
 import { Branding } from "ui/branding";
