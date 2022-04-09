@@ -1,5 +1,5 @@
-# :writing_hand: **Assignment 1** *(Firebase Storefront Dashboard)*
- :calendar: 25th, March 2022 <br/>
+# :writing_hand: **Assignment 4** *(Firebase Storefront Dashboard - Read and Write)*
+ :calendar: 8th, April 2022 <br/>
  :clock11: 11:59pm <br/>
  :balance_scale: <span style="color: red; font-weight:700">20%</span>
 
