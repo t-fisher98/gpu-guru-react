@@ -32,7 +32,6 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { FormStyles } from "ui/forms";
-// import SemiConductor from "assets/images/semiconductor.jpg";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -101,7 +100,6 @@ function LoginPage() {
         {/* Sign in section */}
         <Center
           width="60%"
-          height="100%"
           bgColor="white"
           borderRadius="1rem 0 0 1rem"
           flexDirection="column"
@@ -127,7 +125,7 @@ function LoginPage() {
           <Text color="gray.800" fontSize="1.25rem">
             Sign in to your Dashboard
           </Text>
-          <FormStyles method="POST" onSubmit={onSignInRequest}>
+          <FormStyles method="POST" onSubmit={onSignInRequest} width="75%" height='30%'>
             <VStack spacing={4}>
               <FormControl isRequired={emailHasValue}>
                 <FormLabel>Email</FormLabel>

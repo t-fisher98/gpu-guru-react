@@ -1,17 +1,12 @@
-import React from 'react'
+import React from "react";
 
-import { Branding } from 'ui/branding';
-import { SideBarLink } from 'ui/links';
-import {
-  Box,
-  Center,
-  List,
-  ListItem,
-} from "@chakra-ui/react";
+import { Branding } from "ui/branding";
+import { SideBarLink } from "ui/links";
+import { Box, Center, List, ListItem } from "@chakra-ui/react";
 import {
   BsFillCpuFill,
-	BsPlusCircleFill,
-	BsFillPencilFill,
+  BsPlusCircleFill,
+  BsFillPencilFill,
   BsFillGrid3X3GapFill,
   BsCardList,
   BsCartFill,
@@ -19,15 +14,15 @@ import {
   BsFillTagsFill,
   BsBoxArrowInRight,
 } from "react-icons/bs";
-import { MdDashboard } from 'react-icons/md'
-import { IoDiamondOutline } from 'react-icons/io5'
-import { CgStack } from 'react-icons/cg'
+import { MdDashboard } from "react-icons/md";
+import { IoDiamondOutline } from "react-icons/io5";
+import { CgStack } from "react-icons/cg";
 
-export default function SideBar({children, ...props}) {
+export default function SideBar({ children, ...props }) {
   return (
     <Box width="15.5rem" height="100vh" bg="gray.800">
       <Center bg="gray.900" color={"gray.100"} height="4rem" gap="1">
-        <Branding icon={BsFillCpuFill} iFs="1.75rem" hFs="1.5rem">
+        <Branding icon={BsFillCpuFill} gap="0.5rem" iFs="1.75rem" hFs="1.5rem">
           GPU Guru
         </Branding>
       </Center>

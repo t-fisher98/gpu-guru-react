@@ -27,7 +27,7 @@ function DashboardPage() {
   });
 
   // Conditionally render the dashboard page based on if a user is logged in or not : {isUser}
-  return ( isUser ? 
+  return !isUser ? null : (
     <>
       <Flex width="100vw" height="100vh" bg="gray.200">
         <SideBar />
@@ -37,7 +37,7 @@ function DashboardPage() {
         </Center>
       </Flex>
     </>
-	: null);
+  );
 }
 
 export default DashboardPage;
